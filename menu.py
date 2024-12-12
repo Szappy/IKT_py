@@ -32,17 +32,17 @@ def menu_riportok(szotar):
         menube = input("Kérem válasszon: ")
         match menube:
             case "1":
-                print("A legídősebb alkalmazott: " + riportok.legidosebb(szotar))
+                print("A legídősebb alkalmazott: " + str(riportok.legidosebb(szotar)))
             case "2":
-                print("A legfiatalabb alkalmazott: " + riportok.legfiatalabb(szotar))
+                print("A legfiatalabb alkalmazott: " + str(riportok.legfiatalabb(szotar)))
             case "3":
-                print("Az aktív dolgozók száma: " + riportok.hany_aktiv(szotar))
+                print("Az aktív dolgozók száma: " + str(riportok.hany_aktiv(szotar)))
             case "4":
-                print("Az inaktív dolgozók száma: " + riportok.hany_inaktiv(szotar))
+                print("Az inaktív dolgozók száma: " + str(riportok.hany_inaktiv(szotar)))
             case "5":
-                print("Az összes kifizetés havonta: " + riportok.osszes_kifizetes(szotar))
+                print("Az összes kifizetés havonta: " + str(riportok.osszes_kifizetes(szotar)))
             case "6":
-                print(f"Az átlag fizetés havonta: {riportok.atlag(szotar)}")
+                print("Az átlag fizetés havonta:" + str(riportok.atlag_kifizetes(szotar)))
             
 
 
