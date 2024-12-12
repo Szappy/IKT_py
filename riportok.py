@@ -34,5 +34,5 @@ def osszes_kifizetes():
     return osszes
 
 def atlag_kifizetes():
-    atlag = osszes_kifizetes(szotar_lista)/len(szotar_lista)
+    atlag = osszes_kifizetes()/len(szotar_lista)
     return round(atlag, 2)

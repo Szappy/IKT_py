@@ -1,1 +1,3 @@
-from file import szotar_lista
+import lista
+
+

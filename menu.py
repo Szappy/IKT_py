@@ -12,6 +12,12 @@ def menu_karbantartas():
         print("4. Aktiválás/inaktiválás")
         print("5. Vissza")
         menube = input("Kérem válasszon: ")
+        match menube:
+            case "1": karbantartas.felvitel ()
+            case "2": karbantartas.modositas ()
+            case "3": karbantartas.torles ()
+            case "4": karbantartas.aktinakt ()
+
 
 def menu_riportok():
     menube = ""

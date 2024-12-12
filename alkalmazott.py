@@ -2,8 +2,7 @@ from menu import fomenu
 import file
 
 file.filebe("alkalmazottak.csv")
-print(file.szotar_lista)
 
-#fomenu ()
+fomenu ()
 
-#file.fileki("alkalmazottak.csv")
+file.fileki("alkalmazottak.csv")
