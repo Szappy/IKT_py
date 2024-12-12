@@ -1,4 +1,4 @@
-import alap_adatok
+import alkalmazott
 print("Kérem válasszom a menüből:")
 print("1. CSV fájl feltölés")
 print("2. Manuális feltöltés")
@@ -11,15 +11,15 @@ while menu != "6":
     menu = input("->")
     match menu:
         case "1":
-            alap_adatok.csv_feltoltes()
+            alkalmazott.csv_feltoltes()
         case "2":
-            alap_adatok.manuális_feltöltés()
+            alkalmazott.manuális_feltöltés()
         case "3":
-            alap_adatok.kereses_listazas()
+            alkalmazott.kereses_listazas()
         case "4":
-            alap_adatok.elemek_módosítása()
+            alkalmazott.elemek_módosítása()
         case "5":
-            alap_adatok.csv_letoles()
+            alkalmazott.csv_letoles()
         case "6":
             print("Kilépés...")
         case _:
