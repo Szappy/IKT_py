@@ -1,8 +1,7 @@
 import riportok
+import karbantartas
 
-
-
-def menu_karbantartas(szotar):
+def menu_karbantartas():
     menube = ""
     while menube != "5":
         print("Alkalmazott karbantartó rendszer")
@@ -14,10 +13,7 @@ def menu_karbantartas(szotar):
         print("5. Vissza")
         menube = input("Kérem válasszon: ")
 
-
-
-
-def menu_riportok(szotar):
+def menu_riportok():
     menube = ""
     while menube != "7":
         print("Alkalmazott karbantartó rendszer")
@@ -32,26 +28,19 @@ def menu_riportok(szotar):
         menube = input("Kérem válasszon: ")
         match menube:
             case "1":
-                print("A legídősebb alkalmazott: " + str(riportok.legidosebb(szotar)))
+                print("A legídősebb alkalmazott: " + str(riportok.legidosebb()))
             case "2":
-                print("A legfiatalabb alkalmazott: " + str(riportok.legfiatalabb(szotar)))
+                print("A legfiatalabb alkalmazott: " + str(riportok.legfiatalabb()))
             case "3":
-                print("Az aktív dolgozók száma: " + str(riportok.hany_aktiv(szotar)))
+                print("Az aktív dolgozók száma: " + str(riportok.hany_aktiv()))
             case "4":
-                print("Az inaktív dolgozók száma: " + str(riportok.hany_inaktiv(szotar)))
+                print("Az inaktív dolgozók száma: " + str(riportok.hany_inaktiv()))
             case "5":
-                print("Az összes kifizetés havonta: " + str(riportok.osszes_kifizetes(szotar)))
+                print("Az összes kifizetés havonta: " + str(riportok.osszes_kifizetes()))
             case "6":
-                print("Az átlag fizetés havonta:" + str(riportok.atlag_kifizetes(szotar)))
-            
+                print("Az átlag fizetés havonta:" + str(riportok.atlag_kifizetes()))
 
-
-
-
-
-
-
-def menu_kereses (szotar):
+def menu_kereses ():
     menube = ""
     while menube != "4":
         print("Alkalmazott karbantartó rendszer")
@@ -62,10 +51,7 @@ def menu_kereses (szotar):
         print("4. Vissza")
         menube = input("Kérem válasszon: ")
 
-
-
-
-def fomenu (szotar):
+def fomenu ():
     menube = ""
     while menube != "4":
         print("Alkalmazott karbantartó rendszer")
@@ -79,4 +65,4 @@ def fomenu (szotar):
 
 
             case "2":
-                menu_riportok(szotar)
+                menu_riportok()

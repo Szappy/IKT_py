@@ -1,10 +1,9 @@
-# from menu import m_fomenu
+from menu import fomenu
 import file
 
+file.filebe("alkalmazottak.csv")
+print(file.szotar_lista)
 
-szotar = file.filebe("alkalmazottak.csv")
+#fomenu ()
 
-print(szotar) 
-# menu.fomenu (szotar)
-
-
+#file.fileki("alkalmazottak.csv")
