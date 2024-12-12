@@ -1,3 +1,6 @@
+import riportok
+
+
 
 def menu_karbantartas(szotar):
     menube = ""
@@ -27,6 +30,18 @@ def menu_riportok(szotar):
         print("6. Havi átlag fizetés")
         print("7. Vissza")
         menube = input("Kérem válasszon: ")
+        match menube:
+            case "1":
+                riportok.legidosebb(szotar)
+            case "2":
+                riportok.legfiatalabb(szotar)
+            case "3":
+                riportok.hany_aktiv(szotar)
+            case "4":
+                riportok.hany_inaktiv(szotar)
+                
+
+
 
 
 
