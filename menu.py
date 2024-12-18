@@ -68,7 +68,7 @@ def fomenu ():
         print("4. Kilépés")
         menube = input("Kérem válasszon: ")
         match menube:
-
-
+            case "1":
+                menu_karbantartas()
             case "2":
                 menu_riportok()

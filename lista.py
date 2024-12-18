@@ -10,9 +10,10 @@ def egy_sor_iras (sor, sorszam=None):
     # kifizetes formázása ezres választóval
     kifizetes = f"{sor['KIFIZETES']:,}"
     print(f"{sorszam:<3} {sor['NEV']:<40} {sor['SZULETESI_EV']:>5} {kifizetes:>15} {sor['STATUSZ']:<7} {sor['START_EV']:>5} {sor['INAKT_EV']:>5}")
+    #print(sor)
 
 # Összes rekord vagy megadott -tól -ig rekordok listázása 
-def lista (tol=None, ig=None):
+def listazas (tol=None, ig=None):
     if tol == None:
         tol = 0
     if ig == None:
@@ -38,7 +39,7 @@ def tizes_lista (karb=False, tol=None):
         if j >= len(szotar_lista):
             j = len(szotar_lista)
 
-        lista(szotar_lista, i, j)
+        listazas(i, j)
         i = j
         if i >= len(szotar_lista):
             i = 0
