@@ -36,7 +36,7 @@ def menu_riportok():
             case "1":
                 karbantartas.egy_rekord_iras(riportok.legidosebb(), "A legídősebb alkalmazott")
             case "2":
-                print("A legfiatalabb alkalmazott: " + str(riportok.legfiatalabb()))
+                karbantartas.egy_rekord_iras(riportok.legfiatalabb(), "A legfiatalabb alkalmazott")
             case "3":
                 print("Az aktív dolgozók száma: " + str(riportok.hany_aktiv()))
             case "4":
