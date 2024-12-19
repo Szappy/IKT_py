@@ -34,7 +34,6 @@ def menu_riportok():
         menube = input("Kérem válasszon: ")
         match menube:
             case "1":
-                #print("A legídősebb alkalmazott: " + str(riportok.legidosebb()))
                 karbantartas.egy_rekord_iras(riportok.legidosebb(), "A legídősebb alkalmazott")
             case "2":
                 print("A legfiatalabb alkalmazott: " + str(riportok.legfiatalabb()))
