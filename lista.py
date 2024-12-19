@@ -10,7 +10,6 @@ def egy_sor_iras (sor, sorszam=None):
     # kifizetes formázása ezres választóval
     kifizetes = f"{sor['KIFIZETES']:,}"
     print(f"{sorszam:<3} {sor['NEV']:<40} {sor['SZULETESI_EV']:>5} {kifizetes:>15} {sor['STATUSZ']:<7} {sor['START_EV']:>5} {sor['INAKT_EV']:>5}")
-    #print(sor)
 
 # Összes rekord vagy megadott -tól -ig rekordok listázása 
 def listazas (tol=None, ig=None):
@@ -52,3 +51,17 @@ def tizes_lista (karb=False, tol=None):
         else:
             inp = input("Tovább=Enter, Kilépés=# --> ")
                 
+# Egy rekord kiirasa fuggolegesen
+def egy_rekord_iras (sor, kezdo_uzenet):
+    print("-"*len(kezdo_uzenet))
+    print(kezdo_uzenet)
+    print("-"*len(kezdo_uzenet))
+    # kifizetes formázása ezres választóval
+    kifizetes = f"{sor['KIFIZETES']:,}"
+    print(f"Név: {sor['NEV']}")
+    print(f"születési év: {sor['SZULETESI_EV']}")
+    print(f"Kifizetés: {kifizetes}")
+    print(f"Statusz: {sor['STATUSZ']}")
+    print(f"Belépés éve: {sor['START_EV']}")
+    print(f"Kilépés éve: {sor['INAKT_EV']}")
+    print("-"*len(kezdo_uzenet))
