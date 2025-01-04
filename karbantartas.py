@@ -101,3 +101,22 @@ def modositas ():
         print(f"A(z) {szotar_lista[i]['NEV']} alkalmazott adatai módosítva lettek.")
         print("---------------------------------")
         
+def torles():
+    inp = ""
+    i = 0
+    nev = ""
+    while inp != "#":
+        print("Kilépéshez adja meg a # karaktert.")
+        szamok = list(range(1, len(szotar_lista)+1))
+        inp = tizes_lista(True, i)
+        if inp in str(szamok):
+            i = int(inp)-1
+        else:
+            break
+        nev = szotar_lista[i]["NEV"]
+        inp = input(f"Biztos törli a(z) {szotar_lista[i]['NEV']}alkalmazottat? (IGEN/NEM):")
+        if inp == "IGEN":
+            del szotar_lista[i]
+            print(f"A(z) {nev} alkalmazott adatai törölve.")
+            print("--------------------------")
+            
