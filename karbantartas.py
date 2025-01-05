@@ -119,4 +119,48 @@ def torles():
             del szotar_lista[i]
             print(f"A(z) {nev} alkalmazott adatai törölve.")
             print("--------------------------")
+
+def aktinakt ():
+    inp = ""
+    i = 0
+
+    while inp != "#":
+        
+        print("Kilépéshez adja meg a # karaktert.")
+        # A szamokba betesszuk a jelenlegi 
+        # rekordok szamsorait listában
+        # [1,2,3,4,5,...,1000,...]
+        szamok = list(range(1, len(szotar_lista)+1))
+        inp = tizes_lista(True, i)
+        # ha benne van a szam amit megadott, 
+        # akkor az lesz a kivalasztott rekord,
+        # egyébként kilépünk (vagy #-et adott, vagy 
+        # olyan számot amivel nem létezik rekord)
+        # azért kell a -1, mert 1-től listáztunk
+        if inp in str(szamok):
+            i = int(inp)-1
+        else:
+            break
+
+        if szotar_lista[i]["STATUSZ"] == "AKTÍV":
+            inp = input(f"Biztos inaktiválja a(z) {szotar_lista[i]['NEV']} alkalmazottat? (IGEN/NEM): ")
+            if inp == "IGEN":
+                inp = input(f"Milyen évtől legyen inaktív (Kezdés éve: {szotar_lista[i]['START_EV']}):")
+                if inp == "#":
+                    break
+                if int(inp) < szotar_lista[i]["START_EV"]:
+                    print("Nem lehet korábbi évtől inaktív.")
+                else:
+                    szotar_lista[i]["STATUSZ"] = "INAKTÍV"
+                    szotar_lista[i]["INAKT_EV"] = int(inp)
+                    print(f"A(z) {szotar_lista[i]['NEV']} alkalmazott inaktív státuszba lett téve.")
+                    print("---------------------------------")
+        else:
+            inp = input(f"Biztos aktiválja a(z) {szotar_lista[i]['NEV']} alkalmazottat? (IGEN/NEM): ")
+            if inp == "IGEN":
+                    szotar_lista[i]["STATUSZ"] = "AKTÍV"
+                    szotar_lista[i]["INAKT_EV"] = 0
+                    print(f"A(z) {szotar_lista[i]['NEV']} alkalmazottat aktív státuszba helyeztük.")
+                    print("---------------------------------")
+
             
