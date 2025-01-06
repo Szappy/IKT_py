@@ -34,3 +34,17 @@ def kilep_list ():
             egy_sor_iras(szotar_lista[i],i)
     if fej == False:
         print("Nincs ilyen évvel kapcsolatos adat.")
+
+# Fizetes szerinti lista -tól-ig
+def fizetes_list ():
+    fej = False
+    fizetes_kezd = int(input("Adja meg a fizetéstől értéket: "))
+    fizetes_veg = int(input("Adja meg a fizetésig értéket: "))
+    for i in range(len(szotar_lista)):
+        if szotar_lista[i]["KIFIZETES"] >= fizetes_kezd and szotar_lista[i]["KIFIZETES"] <= fizetes_veg:
+            if fej == False:
+                fej_iras()
+                fej = True
+            egy_sor_iras(szotar_lista[i],i)
+    if fej == False:
+        print("Nincs ilyen összeggel kapcsolatos adat.")
