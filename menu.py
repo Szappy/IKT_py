@@ -1,5 +1,6 @@
 import riportok
 import karbantartas
+import kereses
 
 def menu_karbantartas():
     menube = ""
@@ -79,3 +80,5 @@ def fomenu ():
                 menu_karbantartas()
             case "2":
                 menu_riportok()
+            case "3":
+                menu_kereses()
