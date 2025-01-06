@@ -56,6 +56,13 @@ def menu_kereses ():
         print("3. Fizetés szerinti lista -tól-ig")
         print("4. Vissza")
         menube = input("Kérem válasszon: ")
+        match menube:
+            case "1":
+                kereses.belep_list()
+            case "2":
+                kereses.kilep_list()
+            case "3":
+                kereses.fizetes_list()
 
 def fomenu ():
     menube = ""
