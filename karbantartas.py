@@ -83,21 +83,21 @@ def modositas ():
             if inp == "#":
                 break
             if inp != "":
-                startev = int(inp)
+                start_ev = int(inp)
             else:
-                startev = szotar_lista[i]["START_EV"]
+                start_ev = szotar_lista[i]["START_EV"]
         else:
             inp = input(f"Kérem módosítsa, hogy mely évtől lett inaktív ({szotar_lista[i]['INAKT_EV']}): ")
             if inp == "#":
                 break
             if inp != "":
-                inaktev = int(inp)
+                inakt_ev = int(inp)
             else:
-                inaktev = szotar_lista[i]["INAKT_EV"]
+                inakt_ev = szotar_lista[i]["INAKT_EV"]
 
         szotar_lista[i]["KIFIZETES"] = fizu
-        szotar_lista[i]["START_EV"] = startev
-        szotar_lista[i]["INAKT_EV"] = inaktev
+        szotar_lista[i]["START_EV"] = start_ev
+        szotar_lista[i]["INAKT_EV"] = inakt_ev
         print(f"A(z) {szotar_lista[i]['NEV']} alkalmazott adatai módosítva lettek.")
         print("---------------------------------")
         
