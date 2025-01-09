@@ -1,19 +1,19 @@
 # Alkalmazott kezelő rendszer
 
-## A Pythonban írt rendszer képes az alkalmazottak adatait eltárolni, azokon módosításokat végezni, valamint alapvető listákat készíteni az adatokból. A program karakteres felületű, a felhasználóval történő kommunikáció interaktív.
+A Pythonban írt rendszer képes az alkalmazottak adatait eltárolni, azokon módosításokat végezni, valamint alapvető listákat készíteni az adatokból. A program karakteres felületű, a felhasználóval történő kommunikáció interaktív.
 
-## Az alkalmazottak adatait CSV fájlba tárolja.
+## Az alkalmazottak adatait CSV fájlba tárolja
  
 | Mező neve    | Mező típusa | Mező leírása                                                 |
 |--------------|-------------|--------------------------------------------------------------|
 | NEV          | Szöveges    | Alkalmazott neve                                             |
 | SZULETESI_EV | Szám (int)  | Alkalmazott születési éve (ÉÉÉÉ formában)                    |
-| KIFIZETES    | Szám (int)	 | Összes bruttó juttatás havonta                               |
-| STATUSZ      | Szöveges	 | AKTÍV/INAKTÍV                                                |
+| KIFIZETES    | Szám (int)  | Összes bruttó juttatás havonta                               |
+| STATUSZ      | Szöveges    | AKTÍV/INAKTÍV                                                |
 | START_EV     | Szám (int)  | Alkalmazott munkába állásának az éve (ÉÉÉÉ formában)         |
 | INAKT_EV     | Szám (int)  | Melyik évtől lett inaktív (ÉÉÉÉ formában).                   | 
 
-## A felhasználói felület az alábbi menürendszerre épül:
+## A felhasználói felület az alábbi menürendszerre épül
 1. Adatok karbantartása
 	1. Felvitel
 	2. Módosítás
